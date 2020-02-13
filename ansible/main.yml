@@ -1,0 +1,6 @@
+---
+- name: Set up a simple nginx server that serves content from /html
+  hosts: all
+  roles:
+    - role: updates
+    - role: nginx

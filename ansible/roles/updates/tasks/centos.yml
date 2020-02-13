@@ -1,0 +1,10 @@
+---
+- name: Update yum cache
+  yum:
+    update_cache: yes
+    state: present
+
+- name: Update installed packages
+  yum:
+    state: latest
+    update_only: yes

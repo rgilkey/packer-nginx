@@ -1,0 +1,14 @@
+---
+- name: Install nginx package
+  yum:
+    name:
+      - nginx
+    state: latest
+
+- name: Set up default nginx site
+  copy:
+    src: files/nginx-centos.conf
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
